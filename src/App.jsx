@@ -40,7 +40,7 @@ function App() {
               </span>
             </p>
             <p className="text-4xl mt-4 ml-5 md:ml-16 text-white font-serif">
-              Not the avg. “Full Stack Developer” from INDIA
+              Full Stack Engineer from INDIA
             </p>
             <button className="mt-10 ml-16 w-32 bg-[white] h-12 text-2xl font-jersey rounded-lg">
               RESUME
@@ -101,21 +101,35 @@ function App() {
 
 function Projects() {
   return (
-    <div className="h-screen w-screen relative bg-[#262CBA]">
-      <div className="h-full flex flex-col">
-        {/* Top Section (Blue) */}
-        <div className="h-2/3 w-full bg-[#101010]">
-          <Navbar />
-          <projectsBar />
+    <div className="h-screen w-screen bg-[#101010]">
+      <div className="grid gap-12 mx-10">
+        <Navbar />
+        {/* Upper Row */}
+        <div className="grid grid-cols-3 gap-12 mt-12">
+          <ProjectsBar />
+          <ProjectsBar />
+          <ProjectsBar />
+        </div>
+        {/* Lower Row */}
+        <div className="grid grid-cols-3 gap-12">
+          <AboutBar />
+          <SkillsBar />
         </div>
       </div>
     </div>
   );
 }
-function projectsBar() {
-  return (
-    <div className="border border-red-900 bg-white  mt-14 mx-10 h-96"></div>
-  );
+
+function ProjectsBar() {
+  return <div className="bg-[#ffffff2c] mt-24 rounded-xl h-96"></div>;
+}
+
+function AboutBar() {
+  return <div className="bg-[#ffffff2c] rounded-xl h-64 col-span-2"></div>;
+}
+
+function SkillsBar() {
+  return <div className="bg-[#ffffff2c] rounded-xl h-64"></div>;
 }
 
 function Navbar() {
@@ -141,32 +155,39 @@ function Navbar() {
       link: "https://twitter.com/aayuk_5183",
     },
   ];
+
   const navigate = useNavigate();
+
   return (
     <div className="absolute top-5 w-2/5 h-20 left-3/4 transform -translate-x-1/2 bg-white/10 rounded-full mx-auto flex justify-center items-center gap-8">
-      {icons.map((icon, index) => (
-        <div
-          key={index}
-          className="relative group h-16 w-16 transition-transform duration-300 hover:scale-110 active:scale-90 cursor-pointer"
-          onClick={() => {
-            if (icon.label === "Projects") {
-              navigate("/projects");
-            } else if (icon.label === "Home") {
-              navigate("/");
-            } else {
-              window.open(icon.link, "_blank");
-            }
-          }}
-        >
-          <img src={icon.src} alt={icon.alt} />
-          {/* Tooltip text */}
-          <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-black text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {icon.label}
+      <div className="flex gap-8">
+        {" "}
+        {/* Wrap the icons in a div */}
+        {icons.map((icon, index) => (
+          <div
+            key={index}
+            className="relative group h-16 w-16 transition-transform duration-300 hover:scale-110 active:scale-90 cursor-pointer"
+            onClick={() => {
+              if (icon.label === "Projects") {
+                navigate("/projects");
+              } else if (icon.label === "Home") {
+                navigate("/");
+              } else {
+                window.open(icon.link, "_blank");
+              }
+            }}
+          >
+            <img src={icon.src} alt={icon.alt} />
+            {/* Tooltip text */}
+            <div className="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 bg-black text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {icon.label}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
+
 
 export default Routing;
