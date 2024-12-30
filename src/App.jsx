@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 
 function Routing() {
   return (
@@ -102,34 +108,27 @@ function App() {
 function Projects() {
   return (
     <div className="h-screen w-screen bg-[#101010]">
-      <div className="grid gap-12 mx-10">
+      <div className="w-full h-20">
         <Navbar />
-        {/* Upper Row */}
-        <div className="grid grid-cols-3 gap-12 mt-12">
-          <ProjectsBar />
-          <ProjectsBar />
-          <ProjectsBar />
+      </div>
+      <div className="flex flex-row justify-center items-center mt-24 gap-16 w-full border bg-[#FFFFF] border-red-500 ">
+        <div className="flex flex-col justify-center items-center gap-4 border w-3/5 border-red-500">
+          <div className="h-48 border w-full border-red-500"></div>
+          <div className="h-48 border w-full border-red-500"></div>
+          <div className="h-48 border w-full border-red-500"></div>
         </div>
-        {/* Lower Row */}
-        <div className="grid grid-cols-3 gap-12">
-          <AboutBar />
-          <SkillsBar />
+        <div className="border border-red-800 w-2/5 bg-white">
+          <div></div>
         </div>
       </div>
     </div>
   );
 }
 
-function ProjectsBar() {
-  return <div className="bg-[#ffffff2c] mt-24 rounded-xl h-96"></div>;
-}
-
-function AboutBar() {
-  return <div className="bg-[#ffffff2c] rounded-xl h-64 col-span-2"></div>;
-}
-
-function SkillsBar() {
-  return <div className="bg-[#ffffff2c] rounded-xl h-64"></div>;
+function ProjectsBar({ image, title }) {
+  return (
+    <div className="bg-[#ffffff2c] flex flex-col justify-center items-center mt-24 rounded-xl h-48"></div>
+  );
 }
 
 function Navbar() {
@@ -188,6 +187,5 @@ function Navbar() {
     </div>
   );
 }
-
 
 export default Routing;
