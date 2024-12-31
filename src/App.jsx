@@ -105,31 +105,110 @@ function App() {
   );
 }
 
+
 function Projects() {
   return (
-    <div className="h-screen w-screen bg-[#101010]">
+    <div className="h-screen w-screen bg-[#101010] flex flex-col px-10 ">
+      {/* Navbar */}
       <div className="w-full h-20">
         <Navbar />
       </div>
-      <div className="flex flex-row justify-center items-center mt-24 gap-16 w-full border bg-[#FFFFF] border-red-500 ">
-        <div className="flex flex-col justify-center items-center gap-4 border w-3/5 border-red-500">
-          <div className="h-48 border w-full border-red-500"></div>
-          <div className="h-48 border w-full border-red-500"></div>
-          <div className="h-48 border w-full border-red-500"></div>
+
+      {/* Content Section */}
+      <div className="mt-24 flex flex-1 justify-evenly">
+        {/* Left Section */}
+        <div className="w-[60%] flex flex-col justify-between gap-4">
+          <div className="h-1/3 bg-white rounded-md"></div>
+          <div className="h-1/3 bg-white rounded-md"></div>
+          <div className="h-1/3 bg-white rounded-md"></div>
         </div>
-        <div className="border border-red-800 w-2/5 bg-white">
-          <div></div>
+
+        {/* Right Section */}
+        <div className="w-[30%] bg-[#ffffff2c] rounded-md flex-col flex px-7 py-7">
+          <div className="font-jaro text-white text-6xl text-center">
+            SKIILS
+          </div>
+          <div className="mt-5 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-1/4 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              HTML
+            </div>
+            <div className="w-1/4 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              CSS
+            </div>
+            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA] font-jaro text-white">
+              Javascript
+            </div>
+          </div>
+
+          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-2/5 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              React JS
+            </div>
+            <div className="w-2/5 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Tailwind CSS
+            </div>
+            <div className="w-2/5 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Typescript
+            </div>
+          </div>
+
+          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Firebase
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-3xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Git
+            </div>
+
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA] font-jaro text-white">
+              GitHub
+            </div>
+          </div>
+
+          <div className="mt-6 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Zustand
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Redux
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Recoil
+            </div>
+          </div>
+
+          <div className="mt-6 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-1/4 h-14 text-center flex items-center justify-center text-lg rounded-full bg-[#262CBA]  font-jaro text-white">
+              Node.js
+            </div>
+            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Express.js
+            </div>
+            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Mongo DB
+            </div>
+          </div>
+
+          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
+            <div className="w-1/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              Prisma
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+              PostgresQL
+            </div>
+
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA] font-jaro text-white">
+              Cloudflare
+            </div>
+          </div>
         </div>
       </div>
+      <div className="h-16 w-full"></div>
     </div>
   );
 }
 
-function ProjectsBar({ image, title }) {
-  return (
-    <div className="bg-[#ffffff2c] flex flex-col justify-center items-center mt-24 rounded-xl h-48"></div>
-  );
-}
+
 
 function Navbar() {
   const icons = [
