@@ -48,7 +48,7 @@ function App() {
             <p className="text-4xl mt-4 ml-5 md:ml-16 text-white font-serif">
               Full Stack Engineer from INDIA
             </p>
-            <button className="mt-10 ml-16 w-32 bg-[white] h-12 text-2xl font-jersey rounded-lg">
+            <button className="mt-10 ml-16 w-32 bg-[white] h-12 text-2xl font-jersey rounded-lg hover:bg-slate-400 hover:text-white">
               RESUME
             </button>
           </div>
@@ -105,22 +105,153 @@ function App() {
   );
 }
 
-
 function Projects() {
   return (
-    <div className="h-screen w-screen bg-[#101010] flex flex-col px-10 ">
+    <div className="h-full w-full bg-[#101010] flex flex-col px-10 ">
       {/* Navbar */}
-      <div className="w-full h-20">
+      <div className="w-full  h-20">
         <Navbar />
       </div>
 
       {/* Content Section */}
+
       <div className="mt-24 flex flex-1 justify-evenly">
-        {/* Left Section */}
-        <div className="w-[60%] flex flex-col justify-between gap-4">
-          <div className="h-1/3 bg-white rounded-md"></div>
-          <div className="h-1/3 bg-white rounded-md"></div>
-          <div className="h-1/3 bg-white rounded-md"></div>
+        <div className="w-[60%] flex flex-col  justify-between gap-4">
+          <div className="h-1/3 bg-[#ffffff2c] flex gap-5 flex-row rounded-md p-5 group hover:transform hover:transition-transform hover:scale-105 hover:translate-y-[-5px]">
+            <div className=" h-full rounded-lg ">
+              <img
+                src="/ComuniQ.png"
+                alt=""
+                className="h-auto rounded-lg max-w-52"
+              />
+            </div>
+            <div className="w-full flex flex-col gap-3">
+              <div className="text-4xl text-white font-jaro ">
+                ComuniQ : A Real Time Chat Application
+              </div>
+              <div className="text-white">
+                Comuniq is a real time chat application which allows users to
+                communicate in real time,media sharing and channel creation.
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  React.js{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Tailwind CSS{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Node.js
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  MongoDB
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Socket.js
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Zustand
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Express.js
+                </span>
+
+                <span className="bg-yellow-400 cursor-pointer text-white p-1 px-2 font-bold rounded-lg transform transition-transform hover:-translate-y-2">
+                  <Link to="https://github.com/AayushKP/ComuniQ">Link</Link>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-1/3 bg-[#ffffff2c] flex gap-5 flex-row rounded-md p-5 group hover:transform hover:transition-transform hover:scale-105 hover:translate-y-[-5px]">
+            <div className=" h-full rounded-lg ">
+              <img src="/Postly.png" alt="" className=" rounded-lg max-w-52" />
+            </div>
+            <div className="w-full flex flex-col gap-3">
+              <div className="text-4xl text-white font-jaro ">
+                Postly : The Blog Application
+              </div>
+              <div className="text-white">
+                Postly is a modern blog application built with React.js, Hono on
+                Cloudflare Workers for edge computing, Prisma as the ORM, and
+                PostgreSQL for data storage, ensuring high performance and
+                scalability.
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  React.js{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Tailwind CSS{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Cloudflare
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Workers
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Postgresql
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Hono
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Prisma
+                </span>
+
+                <span className="bg-yellow-400 cursor-pointer text-white p-1 px-2 font-bold rounded-lg transform transition-transform hover:-translate-y-2">
+                  <Link to="https://github.com/AayushKP/Postly">Link</Link>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-1/3 bg-[#ffffff2c] flex gap-5 flex-row rounded-md p-5 group hover:transform hover:transition-transform hover:scale-105 hover:translate-y-[-5px]">
+            <div className=" h-full rounded-lg ">
+              <img
+                src="/ComuniQ.png"
+                alt=""
+                className="h-full rounded-lg max-w-52"
+              />
+            </div>
+            <div className="w-full flex flex-col gap-3">
+              <div className="text-4xl text-white font-jaro ">
+                ComuniQ : A Real Time Chat Application
+              </div>
+              <div className="text-white">
+                Comuniq is a real time chat application which allows users to
+                communicate in real time,media sharing and channel creation.
+              </div>
+              <div className="flex gap-2">
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  React.js{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Tailwind CSS{" "}
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Node.js
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  MongoDB
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Socket.js
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Zustand
+                </span>
+                <span className="bg-blue-500 font-sans text-white p-1 rounded-lg">
+                  Express.js
+                </span>
+
+                <span className="bg-yellow-400 cursor-pointer text-white p-1 px-2 font-bold rounded-lg transform transition-transform hover:-translate-y-2">
+                  <Link to="https://github.com/AayushKP/ComuniQ">Link</Link>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right Section */}
@@ -128,77 +259,88 @@ function Projects() {
           <div className="font-jaro text-white text-6xl text-center">
             SKIILS
           </div>
-          <div className="mt-5 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-1/4 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full  flex flex-row gap-5 justify-evenly">
+            <div className="w-1/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               HTML
             </div>
-            <div className="w-1/4 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-1/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               CSS
             </div>
-            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA] font-jaro text-white">
+            <div className="w-2/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Javascript
             </div>
           </div>
 
-          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-2/5 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly">
+            <div className="w-2/5 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer font-jaro text-white">
               React JS
             </div>
-            <div className="w-2/5 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-2/5 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Tailwind CSS
             </div>
-            <div className="w-2/5 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-2/5 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Typescript
             </div>
           </div>
 
-          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly ">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Firebase
             </div>
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-3xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-3xl rounded-full bg-[#262CBA]  font-jaro text-white">
               Git
             </div>
 
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA] font-jaro text-white">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] font-jaro text-white">
               GitHub
             </div>
           </div>
 
-          <div className="mt-6 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly ">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Zustand
             </div>
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Redux
             </div>
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-2xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Recoil
             </div>
           </div>
 
-          <div className="mt-6 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-1/4 h-14 text-center flex items-center justify-center text-lg rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly ">
+            <div className="w-2/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Node.js
             </div>
-            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-2/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Express.js
             </div>
-            <div className="w-2/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+            <div className="w-2/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Mongo DB
             </div>
           </div>
 
-          <div className="mt-3 w-full border flex flex-row gap-5 justify-evenly border-red-900">
-            <div className="w-1/4 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA]  font-jaro text-white">
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly">
+            <div className="w-1/4 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Prisma
             </div>
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full bg-[#262CBA]  font-jaro text-white">
-              PostgresQL
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
+              PostgreSQL
             </div>
-
-            <div className="w-1/3 h-14 text-center flex items-center justify-center text-xl rounded-full bg-[#262CBA] font-jaro text-white">
+            <div className="w-1/3 h-14 text-center flex items-center transform transition-transform hover:-translate-y-2 justify-center text-xl rounded-full bg-[#262CBA] cursor-pointer  font-jaro text-white">
               Cloudflare
+            </div>
+          </div>
+
+          <div className="mt-5 w-full flex flex-row gap-5 justify-evenly">
+            <div className="w-3/4 h-14 text-center flex items-center justify-center text-xl rounded-full transform transition-transform hover:-translate-y-2 bg-[#262CBA] cursor-pointer  font-jaro text-white">
+              Data Structures
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-2xl rounded-full transform transition-transform hover:-translate-y-2 bg-[#262CBA] cursor-pointer  font-jaro text-white">
+              OOPS
+            </div>
+            <div className="w-1/3 h-14 text-center flex items-center justify-center text-xl rounded-full transform transition-transform hover:-translate-y-2 bg-[#262CBA] cursor-pointer  font-jaro text-white">
+              DBMS
             </div>
           </div>
         </div>
@@ -207,7 +349,6 @@ function Projects() {
     </div>
   );
 }
-
 
 
 function Navbar() {
