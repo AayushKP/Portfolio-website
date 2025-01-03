@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         jaro: ["Jaro", "sans-serif"],
         jersey: ["JerseyM54", "sans-serif"],
+        joan: ["Joan", "serif"],
       },
     },
   },
