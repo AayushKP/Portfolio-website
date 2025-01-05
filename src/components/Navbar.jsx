@@ -9,8 +9,8 @@ import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const icons = [
-    { Icon: FaHome, label: "Home" },
-    { Icon: FaProjectDiagram, label: "Projects" },
+    { Icon: FaHome, label: "Home", target: "Home" },
+    { Icon: FaProjectDiagram, label: "Projects", target: "Projects" },
     {
       Icon: FaGithub,
       label: "GitHub",
@@ -28,7 +28,15 @@ function Navbar() {
     },
   ];
 
-  const navigate = useNavigate();
+  // Function to handle scrolling to sections
+  const handleNavigation = (target) => {
+    if (target) {
+      const element = document.getElementById(target);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <div className="inline-flex h-16 sm:h-20 bg-[#101010] rounded-full items-center px-10 sm:px-20 shadow-lg gap-4">
@@ -38,12 +46,10 @@ function Navbar() {
             key={index}
             className="relative group h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 transition-transform duration-300 hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center"
             onClick={() => {
-              if (icon.label === "Projects") {
-                navigate("/projects");
-              } else if (icon.label === "Home") {
-                navigate("/");
+              if (icon.target) {
+                handleNavigation(icon.target); // Scroll to section
               } else {
-                window.open(icon.link, "_blank");
+                window.open(icon.link, "_blank"); // Open link in new tab for other icons
               }
             }}
           >

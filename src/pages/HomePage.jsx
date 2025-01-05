@@ -52,13 +52,14 @@ function HomePage() {
               transition: { duration: 0.4 },
             }}
           >
-            <div className="inline-flex bg-[#030303] rounded-full z-10">
+            <div className="inline-flex bg-[#030303] rounded-full z-10 ">
               <Navbar />
             </div>
           </motion.div>
         </motion.div>
 
         <motion.div
+          id="Home"
           className="flex-1 flex flex-col items-center justify-center gap-3 md:gap-4 mt-40 md:mt-48 px-4 sm:px-10"
           variants={fadeIn}
         >
@@ -85,19 +86,23 @@ function HomePage() {
             <span className="hidden md:inline">Engineer</span>
           </motion.p>
 
-          <motion.div
+          <motion.a
+            href="/Resume.pdf"
+            target="_blank" // This opens the PDF in a new tab
+            download // This triggers the file download when clicked
             className="cursor-pointer bg-[#0f0f11e9] font-sans mt-4 rounded-xl p-3 text-[#8a8787] whitespace-nowrap transition-all duration-300 ease-in-out shadow-[0_4px_6px_-1px_rgba(88,199,250,1),0_5px_8px_rgba(88,199,250,0.3)] hover:shadow-[0_10px_15px_-3px_rgba(88,199,250,1),0_4px_6px_-2px_rgba(88,199,250,1)] sm:p-4 text-xs sm:text-base"
             whileHover={{ scale: 1.1 }}
             variants={fadeIn}
           >
             Download CV
-          </motion.div>
+          </motion.a>
 
           <motion.div className="md:mt-5" variants={fadeIn}>
             <Skills />
           </motion.div>
 
           <motion.div
+            id="Projects"
             className="w-full max-w-2xl pt-6 pb-8 px-6 md:px-16 mx-auto bg-gradient-to-r from-black/30 via-[#9d58bd51] to-black/40 backdrop-blur-xl shadow-lg rounded-xl"
             variants={fadeIn}
           >
