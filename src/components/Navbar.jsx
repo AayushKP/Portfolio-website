@@ -31,7 +31,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <div className="inline-flex h-16 sm:h-20 bg-white/10 rounded-full items-center px-10 sm:px-20 shadow-lg gap-4">
+    <div className="inline-flex h-16 sm:h-20 bg-[#101010] rounded-full items-center px-10 sm:px-20 shadow-lg gap-4">
       <div className="flex gap-4">
         {icons.map((icon, index) => (
           <div

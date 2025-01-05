@@ -15,8 +15,9 @@ import {
   SiCloudflare,
   SiFirebase,
   SiRecoil,
+  SiHono,
+  SiReduxsaga,
 } from "react-icons/si";
-import { SiReduxsaga } from "react-icons/si";
 
 // Infinite Scroll Component
 const InfiniteScroll = ({
@@ -83,6 +84,7 @@ const items = [
   { title: "Tailwind CSS", icon: <SiTailwindcss /> },
   { title: "JavaScript", icon: <FaJsSquare /> },
   { title: "TypeScript", icon: <SiTypescript /> },
+  { title: "React", icon: <FaReact /> },
   { title: "Node.js", icon: <FaNodeJs /> },
   { title: "Express.js", icon: <SiExpress /> },
   { title: "Prisma", icon: <SiPrisma /> },
@@ -91,6 +93,7 @@ const items = [
   { title: "Firebase", icon: <SiFirebase /> },
   { title: "Zustand", icon: <SiReduxsaga /> },
   { title: "Recoil", icon: <SiRecoil /> },
+  { title: "Hono", icon: <SiHono /> },
 ];
 
 const App = () => {
