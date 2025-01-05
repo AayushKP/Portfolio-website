@@ -75,7 +75,7 @@ function ProjectsGrid() {
       description:
         "Postly is a scalable cloud-based blog platform built with Hono.js, Cloudflare Workers, React, and TypeScript, offering serverless performance and real-time updates.",
       imageUrl:
-        "https://res.cloudinary.com/aayush5183/image/upload/v1736048127/Screenshot_2025-01-05_090318_w3rv73.png",
+        "https://res.cloudinary.com/aayush5183/image/upload/v1736048174/Postly_nizjwu.png",
       skills: [
         "React",
         "Tailwind",
