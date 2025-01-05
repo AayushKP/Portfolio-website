@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function Project({ title, description, imageUrl, onClick }) {
   const { ref, inView } = useInView({
@@ -12,12 +13,13 @@ function Project({ title, description, imageUrl, onClick }) {
   return (
     <motion.div
       ref={ref}
-      className={`w-[18rem] lg:w-[22rem] h-48 lg:h-64 bg-cover bg-center relative rounded-2xl overflow-hidden cursor-pointer group transition-all duration-700 ease-in-out custom-shadow custom-shadow-hover ${
+      className={`w-[18rem] lg:w-[22rem] h-48 lg:h-64 bg-cover bg-center relative rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300 ease-in-out custom-shadow custom-shadow-hover ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       onClick={onClick}
       whileHover={{
         scale: 1.05,
+        translateY: -5,
         transition: { duration: 0.3, ease: "easeInOut" },
       }}
       whileTap={{ scale: 0.95 }}
@@ -69,6 +71,8 @@ function ProjectsGrid() {
         "Socket.io",
         "Cloudinary",
       ],
+      live: "https://chat-comuniq.vercel.app/",
+      github: "https://github.com/AayushKP/ComuniQ",
     },
     {
       title: "Postly",
@@ -85,6 +89,8 @@ function ProjectsGrid() {
         "PostgresSQL",
         "Cloudflare workers",
       ],
+      live: "https://postly-blog-go.vercel.app/",
+      github: "https://github.com/AayushKP/Postly",
     },
     {
       title: "LinkedIn",
@@ -102,6 +108,8 @@ function ProjectsGrid() {
         "Cloudinary",
         "Mailtrap",
       ],
+      live: "",
+      github: "https://github.com/AayushKP/LinkedIn-Clone",
     },
     {
       title: "Dice-Game",
@@ -110,6 +118,8 @@ function ProjectsGrid() {
       imageUrl:
         "https://res.cloudinary.com/aayush5183/image/upload/v1736049271/Dice_Game_qwxcdv.png",
       skills: ["React", "Tailwind"],
+      live: "",
+      github: "https://github.com/AayushKP/Dice-Game-React",
     },
     {
       title: "ToDOO",
@@ -118,6 +128,8 @@ function ProjectsGrid() {
       imageUrl:
         "https://res.cloudinary.com/aayush5183/image/upload/v1736057269/d29eccd0-1f28-472c-bf5f-ed0679ab2f90.png",
       skills: ["React", "Tailwind"],
+      live: "https://keeper-todo.vercel.app/",
+      github: "https://github.com/AayushKP/Todo",
     },
     {
       title: "Upload-IT",
@@ -126,6 +138,8 @@ function ProjectsGrid() {
       imageUrl:
         "https://res.cloudinary.com/aayush5183/image/upload/v1736056978/af2db867-165a-47cf-bed9-ee9a1718019a.png",
       skills: ["React", "Tailwind", "Node.js", "Express", "Multer", "MongoDB"],
+      live: "",
+      github: "https://github.com/AayushKP/Upload-IT",
     },
   ];
 
@@ -185,6 +199,7 @@ function ProjectsGrid() {
               >
                 <RxCross1 />
               </button>
+
               {/* Image */}
               <img
                 src={selectedProject.imageUrl}
@@ -194,6 +209,35 @@ function ProjectsGrid() {
 
               {/* Content Section */}
               <div className="relative p-8 flex flex-col justify-end h-full text-gray-200">
+                {/* External Link and GitHub Icons */}
+                <div className="flex justify-start gap-6 mb-4">
+                  {selectedProject.live && (
+                    <motion.a
+                      href={selectedProject.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex justify-center items-center bg-gray-300 rounded-full text-black cursor-pointer"
+                      whileHover={{ scale: 1.1, translateY: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FaExternalLinkAlt className="text-xl" />
+                    </motion.a>
+                  )}
+
+                  {selectedProject.github && (
+                    <motion.a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 flex justify-center items-center bg-gray-300 rounded-full text-black cursor-pointer"
+                      whileHover={{ scale: 1.1, translateY: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FaGithub className="text-xl" />
+                    </motion.a>
+                  )}
+                </div>
+
                 {/* Skills */}
                 <div className="mb-4 flex flex-wrap gap-2">
                   {selectedProject.skills.map((skill, index) => (
