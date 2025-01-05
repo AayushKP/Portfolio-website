@@ -5,7 +5,6 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const icons = [
@@ -19,7 +18,7 @@ function Navbar() {
     {
       Icon: FaLinkedin,
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/aayush-kashyap-240655257/",
+      link: "https://www.linkedin.com/in/ayush-kashyap-240655257/",
     },
     {
       Icon: FaTwitter,
