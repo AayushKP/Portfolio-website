@@ -91,7 +91,7 @@ function ProjectsGrid() {
         "PostgresSQL",
         "Cloudflare workers",
       ],
-      live: "https://postly-blog-go.vercel.app/",
+      live: "https://postly-delta.vercel.app/",
       github: "https://github.com/AayushKP/Postly",
     },
     {
