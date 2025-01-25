@@ -43,7 +43,7 @@ function Project({ title, description, imageUrl, onClick }) {
       {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-end p-4 text-white opacity-100 ">
         <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm truncate opacity-0 group-hover:opacity-100">
+        <p className="text-sm truncate opacity-60 group-hover:opacity-100">
           {description}
         </p>
       </div>
