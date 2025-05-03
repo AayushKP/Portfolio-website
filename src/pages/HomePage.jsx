@@ -31,8 +31,6 @@ function HomePage() {
         animate="visible"
         variants={staggerContainer}
       >
-        {/* Navbar */}
-        {/* Navbar */}
         <motion.div
           className="fixed left-1/2 right-1/2 transform -translate-x-1/2 z-20 flex justify-center items-center mt-10 cursor-pointer transition-all duration-500 ease-out"
           variants={fadeFromTop}
