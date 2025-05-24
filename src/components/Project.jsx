@@ -119,7 +119,7 @@ function ProjectsGrid() {
         "Tailwind",
         "Cloudinary",
       ],
-      live: "resonance-beta.vercel.app",
+      live: "https://resonance-beta.vercel.app",
       github: "https://github.com/AayushKP/Resonance",
     },
     {
