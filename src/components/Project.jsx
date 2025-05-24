@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+} from "react-icons/fa";
 
-function Project({ title, description, imageUrl, onClick }) {
+function Project({
+  title,
+  description,
+  imageUrl,
+  onClick,
+}) {
   const { ref, inView } = useInView({
     triggerOnce: true, // Ensure animation runs only once when it enters the view
     threshold: 0.1, // Trigger when 10% of the element is in view
@@ -14,7 +22,9 @@ function Project({ title, description, imageUrl, onClick }) {
     <motion.div
       ref={ref}
       className={`w-[18rem] lg:w-[22rem] h-48 lg:h-64 bg-cover bg-center relative rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300 ease-in-out custom-shadow custom-shadow-hover ${
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        inView
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-8"
       }`}
       onClick={onClick}
       whileHover={{
@@ -24,7 +34,10 @@ function Project({ title, description, imageUrl, onClick }) {
       }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+      animate={{
+        opacity: inView ? 1 : 0,
+        y: inView ? 0 : 20,
+      }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       {/* Image Background */}
@@ -53,7 +66,8 @@ function Project({ title, description, imageUrl, onClick }) {
 
 function ProjectsGrid() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] =
+    useState(null);
 
   const projects = [
     {
@@ -95,11 +109,37 @@ function ProjectsGrid() {
       github: "https://github.com/AayushKP/Postly",
     },
     {
+      title: "Resonance",
+      description: "The website of Music Club of HITK.",
+      imageUrl:
+        "https://res.cloudinary.com/aayush5183/image/upload/v1748082154/res_hlvzc2.png",
+      skills: [
+        "Next.js",
+        "Typescript",
+        "Tailwind",
+        "Cloudinary",
+      ],
+      live: "resonance-beta.vercel.app",
+      github: "https://github.com/AayushKP/Resonance",
+    },
+    {
       title: "LinkedIn",
       description:
-        "A fully functional LinkedIn clone leverages Mailtrap simulating email communications such as welcome emails, connection requests, and notifications during development.",
+        "A functional LinkedIn clone featuring a posts system and other key UI components of LinkedIn. Utilizes Firebase for authentication and Redux.js for state management.",
       imageUrl:
         "https://res.cloudinary.com/aayush5183/image/upload/v1736047720/Linnkedin_lruodn.png",
+      skills: ["React", "Tailwind", "Firebase", "Redux"],
+      live: "linkedin-clone-ae2e5.web.app",
+      github:
+        "https://github.com/AayushKP/linkedIn-clone-Frontend-",
+    },
+
+    {
+      title: "Upload-IT",
+      description:
+        "Upload-IT is a file upload platform built with React.js, Tailwind CSS, and Multer that allows users to upload and manage files, while automatically applying a grayscale effect to images upon upload",
+      imageUrl:
+        "https://res.cloudinary.com/aayush5183/image/upload/v1736056978/af2db867-165a-47cf-bed9-ee9a1718019a.png",
       skills: [
         "React",
         "Tailwind",
@@ -107,11 +147,9 @@ function ProjectsGrid() {
         "Express",
         "Multer",
         "MongoDB",
-        "Cloudinary",
-        "Mailtrap",
       ],
       live: "",
-      github: "https://github.com/AayushKP/LinkedIn-Clone",
+      github: "https://github.com/AayushKP/Upload-IT",
     },
     {
       title: "Dice-Game",
@@ -122,26 +160,6 @@ function ProjectsGrid() {
       skills: ["React", "Tailwind"],
       live: "",
       github: "https://github.com/AayushKP/Dice-Game-React",
-    },
-    {
-      title: "ToDOO",
-      description:
-        "ToDOO is a task management app built with React.js and Tailwind CSS, using LocalStorage to save and persist tasks across sessions.",
-      imageUrl:
-        "https://res.cloudinary.com/aayush5183/image/upload/v1736057269/d29eccd0-1f28-472c-bf5f-ed0679ab2f90.png",
-      skills: ["React", "Tailwind"],
-      live: "https://keeper-todo.vercel.app/",
-      github: "https://github.com/AayushKP/Todo",
-    },
-    {
-      title: "Upload-IT",
-      description:
-        "Upload-IT is a file upload platform built with React.js, Tailwind CSS, and Multer that allows users to upload and manage files, while automatically applying a grayscale effect to images upon upload",
-      imageUrl:
-        "https://res.cloudinary.com/aayush5183/image/upload/v1736056978/af2db867-165a-47cf-bed9-ee9a1718019a.png",
-      skills: ["React", "Tailwind", "Node.js", "Express", "Multer", "MongoDB"],
-      live: "",
-      github: "https://github.com/AayushKP/Upload-IT",
     },
   ];
 
@@ -193,7 +211,10 @@ function ProjectsGrid() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{
+                duration: 0.4,
+                ease: "easeInOut",
+              }}
             >
               <button
                 className="absolute top-4 right-5 bg-black/30 w-10 h-10 flex justify-center items-center text-white p-2 rounded-full"
@@ -219,7 +240,10 @@ function ProjectsGrid() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 flex justify-center items-center bg-gray-300 rounded-full text-black cursor-pointer"
-                      whileHover={{ scale: 1.1, translateY: -5 }}
+                      whileHover={{
+                        scale: 1.1,
+                        translateY: -5,
+                      }}
                       transition={{ duration: 0.3 }}
                     >
                       <FaExternalLinkAlt className="text-xl" />
@@ -232,7 +256,10 @@ function ProjectsGrid() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 flex justify-center items-center bg-gray-300 rounded-full text-black cursor-pointer"
-                      whileHover={{ scale: 1.1, translateY: -5 }}
+                      whileHover={{
+                        scale: 1.1,
+                        translateY: -5,
+                      }}
                       transition={{ duration: 0.3 }}
                     >
                       <FaGithub className="text-xl" />
@@ -242,16 +269,21 @@ function ProjectsGrid() {
 
                 {/* Skills */}
                 <div className="mb-4 flex flex-wrap gap-2">
-                  {selectedProject.skills.map((skill, index) => (
-                    <motion.span
-                      key={index}
-                      className="bg-blue-500 text-white text-sm px-3 py-1 rounded-full cursor-pointer"
-                      whileHover={{ scale: 1.1, translateY: -5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
+                  {selectedProject.skills.map(
+                    (skill, index) => (
+                      <motion.span
+                        key={index}
+                        className="bg-blue-500 text-white text-sm px-3 py-1 rounded-full cursor-pointer"
+                        whileHover={{
+                          scale: 1.1,
+                          translateY: -5,
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {skill}
+                      </motion.span>
+                    )
+                  )}
                 </div>
 
                 {/* Title */}

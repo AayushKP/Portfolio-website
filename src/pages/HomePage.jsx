@@ -86,8 +86,8 @@ function HomePage() {
 
           <motion.a
             href="/Resume.pdf"
-            target="_blank" // This opens the PDF in a new tab
-            download // This triggers the file download when clicked
+            target="_blank"
+            download 
             className="cursor-pointer bg-[#0f0f11e9] font-sans mt-4 rounded-xl p-3 text-[#8a8787] whitespace-nowrap transition-all duration-300 ease-in-out shadow-[0_4px_6px_-1px_rgba(88,199,250,1),0_5px_8px_rgba(88,199,250,0.3)] hover:shadow-[0_10px_15px_-3px_rgba(88,199,250,1),0_4px_6px_-2px_rgba(88,199,250,1)] sm:p-4 text-xs sm:text-base"
             whileHover={{ scale: 1.1 }}
             variants={fadeIn}
